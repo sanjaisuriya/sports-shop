@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Profile – SportsHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/theme.js"></script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans flex flex-col min-h-screen">
+
+  <header class="bg-white dark:bg-slate-900 border-b py-3 px-4 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="../index.html" class="font-black text-xl">SPORTS<span class="text-red-600">HUB</span></a>
+      <a href="dashboard.html" class="text-xs font-bold text-slate-500"><i class="fa-solid fa-arrow-left"></i> Dashboard</a>
+    </div>
+  </header>
+
+  <main class="py-10 max-w-7xl mx-auto px-4 w-full flex-1">
+    <div class="bg-white dark:bg-slate-900 border rounded-2xl p-8 max-w-2xl mx-auto shadow-sm">
+      <h2 class="text-xl font-bold mb-6 border-b pb-3">My Personal Profile</h2>
+      <form class="space-y-4 text-xs font-semibold">
+        <div>
+          <label class="block mb-1 text-slate-500">Full Name</label>
+          <input type="text" value="Rahul Sharma" class="w-full bg-slate-100 dark:bg-slate-800 border rounded p-3">
+        </div>
+        <div>
+          <label class="block mb-1 text-slate-500">Email Address</label>
+          <input type="email" value="rahul.sharma@example.com" class="w-full bg-slate-100 dark:bg-slate-800 border rounded p-3">
+        </div>
+        <div>
+          <label class="block mb-1 text-slate-500">Phone Number</label>
+          <input type="tel" value="+91 98765 43210" class="w-full bg-slate-100 dark:bg-slate-800 border rounded p-3">
+        </div>
+        <button type="submit" class="btn-sh-primary text-xs py-3 px-6">Save Profile Changes</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Categories – Admin Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans flex min-h-screen">
+
+  <aside class="w-64 bg-slate-900 border-r border-slate-800 p-4 shrink-0">
+    <a href="index.html" class="flex items-center gap-2 mb-8"><div class="bg-red-600 text-white p-1.5 rounded font-black text-lg">SH</div><span class="font-black text-xl text-white">Admin<span class="text-red-600">Hub</span></span></a>
+    <a href="index.html" class="text-xs font-bold text-slate-400 hover:text-white"><i class="fa-solid fa-arrow-left"></i> Dashboard</a>
+  </aside>
+
+  <main class="flex-1 p-8 space-y-6">
+    <div class="flex justify-between items-center">
+      <h1 class="text-2xl font-black">SPORTS CATEGORIES MANAGEMENT</h1>
+      <button onclick="alert('Category Creation Modal Triggered')" class="btn-sh-primary text-xs py-2.5 px-4"><i class="fa-solid fa-plus mr-1"></i> Add Category</button>
+    </div>
+
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+      <table class="w-full text-left text-xs">
+        <thead class="bg-slate-800 text-slate-400 uppercase font-bold">
+          <tr>
+            <th class="p-3">Category Name</th>
+            <th class="p-3">Slug</th>
+            <th class="p-3">Item Count</th>
+            <th class="p-3">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800 text-slate-300" id="adminCategoriesTable"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="../assets/js/admin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('../data/categories.json')
+        .then(r => r.json())
+        .then(categories => {
+          const tbody = document.getElementById('adminCategoriesTable');
+          tbody.innerHTML = categories.map(c => `
+            <tr id="cat-${c.id}">
+              <td class="p-3 font-bold text-white"><i class="fa-solid ${c.icon} text-red-500 mr-2"></i> ${c.name}</td>
+              <td class="p-3 font-mono text-slate-400">${c.slug}</td>
+              <td class="p-3 font-bold">${c.itemCount} Products</td>
+              <td class="p-3 space-x-2">
+                <button onclick="window.deleteAdminItem('category', '${c.id}')" class="text-red-400 hover:underline"><i class="fa-solid fa-trash"></i></button>
+              </td>
+            </tr>
+          `).join('');
+        });
+    });
+  </script>
+</body>
+</html>

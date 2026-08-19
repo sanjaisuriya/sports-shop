@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard – Sports & Cricket Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased flex flex-col min-h-screen">
+
+  <header class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 py-3 px-4 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2">
+        <div class="bg-red-600 text-white p-2 rounded-lg font-black text-xl leading-none">SH</div>
+        <span class="font-black text-xl text-slate-900 dark:text-white tracking-tight">SPORTS<span class="text-red-600">PORTAL</span></span>
+      </a>
+      <div class="flex items-center gap-4 text-xs font-bold">
+        <button onclick="window.toggleTheme()" class="hover:text-red-600 flex items-center gap-1">
+          <i class="fa-solid fa-moon sh-theme-icon-moon"></i>
+          <i class="fa-solid fa-sun sh-theme-icon-sun hidden text-amber-400"></i>
+          <span class="sh-theme-text">Theme</span>
+        </button>
+        <a href="../index.html" class="text-slate-600 dark:text-slate-300 hover:text-red-600"><i class="fa-solid fa-store mr-1"></i> Main Sports Store</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-10 flex-1 max-w-7xl mx-auto px-4 w-full">
+    <div class="flex flex-col md:flex-row gap-8">
+      
+      <!-- Customer Sidebar -->
+      <aside class="w-full md:w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shrink-0 shadow-sm">
+        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-200 dark:border-slate-800">
+          <div class="w-12 h-12 rounded-full bg-red-600 text-white font-black flex items-center justify-center text-lg">RS</div>
+          <div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-sm">Rahul Sharma</h3>
+            <span class="text-[11px] text-slate-500">rahul.s@example.com</span>
+          </div>
+        </div>
+        <nav class="space-y-1 text-xs font-semibold text-slate-700 dark:text-slate-200">
+          <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-red-600 text-white"><i class="fa-solid fa-gauge-high w-4"></i> Dashboard Overview</a>
+          <a href="profile.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-user w-4 text-red-600"></i> My Profile</a>
+          <a href="orders.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-box-archive w-4 text-red-600"></i> My Orders</a>
+          <a href="wishlist.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-heart w-4 text-red-600"></i> Saved Wishlist</a>
+          <a href="addresses.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-location-dot w-4 text-red-600"></i> Addresses</a>
+          <a href="enquiries.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-truck-ramp-box w-4 text-red-600"></i> Bulk Enquiries</a>
+          <a href="team-kit-requests.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-shirt w-4 text-red-600"></i> Custom Team Kits</a>
+          <a href="reviews.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-star w-4 text-red-600"></i> Product Reviews</a>
+          <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-gear w-4 text-red-600"></i> Settings</a>
+          <a href="../login.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-red-600 hover:bg-red-50 dark:hover:bg-slate-800 mt-4"><i class="fa-solid fa-right-from-bracket w-4"></i> Logout</a>
+        </nav>
+      </aside>
+
+      <!-- Dashboard Main View -->
+      <section class="flex-1 space-y-6">
+        <!-- Overview Stat Cards -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
+            <span class="text-slate-500 text-xs font-semibold block">Total Orders</span>
+            <div class="text-2xl font-black text-slate-900 dark:text-white mt-1">14</div>
+            <span class="text-[10px] text-slate-400">Sports & Cricket Equipment</span>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
+            <span class="text-slate-500 text-xs font-semibold block">Pending Delivery</span>
+            <div class="text-2xl font-black text-amber-500 mt-1">1</div>
+            <span class="text-[10px] text-amber-600 dark:text-amber-400">In Transit</span>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
+            <span class="text-slate-500 text-xs font-semibold block">Completed</span>
+            <div class="text-2xl font-black text-green-500 mt-1">13</div>
+            <span class="text-[10px] text-green-600">Delivered</span>
+          </div>
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 shadow-sm">
+            <span class="text-slate-500 text-xs font-semibold block">Saved Wishlist</span>
+            <div class="text-2xl font-black text-red-600 mt-1">6</div>
+            <span class="text-[10px] text-slate-400">Multi-Sport Items</span>
+          </div>
+        </div>
+
+        <!-- Multi-Sport Categories Purchased -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm">
+          <h3 class="font-black text-base text-slate-900 dark:text-white mb-4">Multi-Sport Purchased Categories</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+              <i class="fa-solid fa-baseball-bat-ball text-red-600 text-xl mb-1"></i>
+              <div class="font-bold text-sm text-slate-900 dark:text-white">Cricket</div>
+              <span class="text-[10px] text-slate-500">5 Orders</span>
+            </div>
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+              <i class="fa-solid fa-football-ball text-blue-600 text-xl mb-1"></i>
+              <div class="font-bold text-sm text-slate-900 dark:text-white">Football</div>
+              <span class="text-[10px] text-slate-500">4 Orders</span>
+            </div>
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+              <i class="fa-solid fa-basketball-ball text-amber-600 text-xl mb-1"></i>
+              <div class="font-bold text-sm text-slate-900 dark:text-white">Basketball</div>
+              <span class="text-[10px] text-slate-500">3 Orders</span>
+            </div>
+            <div class="p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+              <i class="fa-solid fa-dumbbell text-purple-600 text-xl mb-1"></i>
+              <div class="font-bold text-sm text-slate-900 dark:text-white">Fitness & Gym</div>
+              <span class="text-[10px] text-slate-500">2 Orders</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Orders Table -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-black text-base text-slate-900 dark:text-white">Recent Multi-Sport Equipment Orders</h3>
+            <a href="orders.html" class="text-xs font-bold text-red-600 hover:underline">View All Orders</a>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold uppercase">
+                <tr>
+                  <th class="p-3">Order ID</th>
+                  <th class="p-3">Date</th>
+                  <th class="p-3">Category / Equipment</th>
+                  <th class="p-3">Total</th>
+                  <th class="p-3">Status</th>
+                  <th class="p-3">Action</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y border-t border-slate-100 dark:border-slate-800 text-slate-700 dark:text-slate-200">
+                <tr>
+                  <td class="p-3 font-bold">#SH-88405</td>
+                  <td class="p-3">Aug 18, 2026</td>
+                  <td class="p-3 font-semibold"><i class="fa-solid fa-football-ball text-red-500 mr-1"></i> Nike Flight Match Football</td>
+                  <td class="p-3 font-bold">$139.99</td>
+                  <td class="p-3"><span class="bg-amber-100 text-amber-700 px-2 py-0.5 rounded font-bold">In Transit</span></td>
+                  <td class="p-3"><a href="order-details.html?id=SH-88405" class="text-red-600 hover:underline font-bold">View Details</a></td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold">#SH-88401</td>
+                  <td class="p-3">Aug 15, 2026</td>
+                  <td class="p-3 font-semibold"><i class="fa-solid fa-baseball-bat-ball text-red-500 mr-1"></i> Kookaburra Bat & Gloves Kit</td>
+                  <td class="p-3 font-bold">$629.99</td>
+                  <td class="p-3"><span class="bg-green-100 text-green-700 px-2 py-0.5 rounded font-bold">Delivered</span></td>
+                  <td class="p-3"><a href="order-details.html?id=SH-88401" class="text-red-600 hover:underline font-bold">View Details</a></td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold">#SH-88398</td>
+                  <td class="p-3">Aug 02, 2026</td>
+                  <td class="p-3 font-semibold"><i class="fa-solid fa-dumbbell text-purple-500 mr-1"></i> Bowflex SelectTech Dumbbells</td>
+                  <td class="p-3 font-bold">$429.00</td>
+                  <td class="p-3"><span class="bg-green-100 text-green-700 px-2 py-0.5 rounded font-bold">Delivered</span></td>
+                  <td class="p-3"><a href="order-details.html?id=SH-88398" class="text-red-600 hover:underline font-bold">View Details</a></td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold">#SH-88392</td>
+                  <td class="p-3">Jul 20, 2026</td>
+                  <td class="p-3 font-semibold"><i class="fa-solid fa-basketball-ball text-amber-500 mr-1"></i> Wilson NBA Game Basketball</td>
+                  <td class="p-3 font-bold">$149.00</td>
+                  <td class="p-3"><span class="bg-green-100 text-green-700 px-2 py-0.5 rounded font-bold">Delivered</span></td>
+                  <td class="p-3"><a href="order-details.html?id=SH-88392" class="text-red-600 hover:underline font-bold">View Details</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

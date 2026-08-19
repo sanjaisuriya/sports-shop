@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+
+    <!-- Turf Pattern -->
+    <linearGradient id="turfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+
+    <!-- Willow Wood Texture -->
+    <linearGradient id="willowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e8d5b7"/>
+      <stop offset="25%" stop-color="#f5e6ce"/>
+      <stop offset="50%" stop-color="#dfcbab"/>
+      <stop offset="75%" stop-color="#f2e2c6"/>
+      <stop offset="100%" stop-color="#d4bf9c"/>
+    </linearGradient>
+
+    <!-- Handle Rubber Grip -->
+    <linearGradient id="gripGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b91c1c"/>
+      <stop offset="50%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+
+    <!-- Red Leather Ball -->
+    <radialGradient id="ballGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="40%" stop-color="#dc2626"/>
+      <stop offset="85%" stop-color="#991b1b"/>
+      <stop offset="100%" stop-color="#450a0a"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background Turf & Pitch -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <ellipse cx="400" cy="480" rx="360" ry="90" fill="url(#turfGrad)" opacity="0.9"/>
+  <ellipse cx="400" cy="480" rx="320" ry="70" fill="#14532d" opacity="0.6"/>
+
+  <!-- Bat Shadow -->
+  <ellipse cx="380" cy="510" rx="220" ry="25" fill="#000000" opacity="0.5"/>
+
+  <!-- CRICKET BAT GRAPHIC (Diagonal Placement) -->
+  <g transform="translate(400, 300) rotate(-35) translate(-400, -300)">
+    
+    <!-- Rubber Grip Handle Top -->
+    <rect x="382" y="50" width="36" height="180" rx="18" fill="url(#gripGrad)"/>
+    <!-- Grip Rubber Rings texture -->
+    <line x1="382" y1="70" x2="418" y2="70" stroke="#7f1d1d" stroke-width="2"/>
+    <line x1="382" y1="90" x2="418" y2="90" stroke="#7f1d1d" stroke-width="2"/>
+    <line x1="382" y1="110" x2="418" y2="110" stroke="#7f1d1d" stroke-width="2"/>
+    <line x1="382" y1="130" x2="418" y2="130" stroke="#7f1d1d" stroke-width="2"/>
+    <line x1="382" y1="150" x2="418" y2="150" stroke="#7f1d1d" stroke-width="2"/>
+    <line x1="382" y1="170" x2="418" y2="170" stroke="#7f1d1d" stroke-width="2"/>
+    <line x1="382" y1="190" x2="418" y2="190" stroke="#7f1d1d" stroke-width="2"/>
+    <line x1="382" y1="210" x2="418" y2="210" stroke="#7f1d1d" stroke-width="2"/>
+
+    <!-- Handle Splice Connection -->
+    <polygon points="385,210 415,210 410,240 390,240" fill="#b45309"/>
+
+    <!-- Willow Bat Blade -->
+    <path d="M 370 230 
+             C 365 250, 360 300, 360 440 
+             C 360 480, 375 500, 400 500 
+             C 425 500, 440 480, 440 440 
+             C 440 300, 435 250, 430 230 
+             Z" 
+          fill="url(#willowGrad)" stroke="#b45309" stroke-width="3"/>
+
+    <!-- Wood Grains -->
+    <path d="M 375 250 L 375 480" stroke="#c7a77e" stroke-width="1.5" opacity="0.6"/>
+    <path d="M 388 240 L 388 490" stroke="#c7a77e" stroke-width="1.5" opacity="0.6"/>
+    <path d="M 400 235 L 400 495" stroke="#c7a77e" stroke-width="2" opacity="0.7"/>
+    <path d="M 412 240 L 412 490" stroke="#c7a77e" stroke-width="1.5" opacity="0.6"/>
+    <path d="M 425 250 L 425 480" stroke="#c7a77e" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Spine High-Power Ridge Highlight -->
+    <path d="M 400 240 L 400 485" stroke="#ffffff" stroke-width="3" opacity="0.35"/>
+
+    <!-- Brand Sticker Header -->
+    <rect x="365" y="250" width="70" height="90" rx="6" fill="#1e293b"/>
+    <rect x="368" y="253" width="64" height="84" rx="4" fill="#dc2626"/>
+    <text x="400" y="285" font-family="'Inter', sans-serif" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle">KOOKABURRA</text>
+    <text x="400" y="310" font-family="'Inter', sans-serif" font-weight="900" font-size="18" fill="#facc15" text-anchor="middle">KAHUNA</text>
+    <text x="400" y="328" font-family="'Inter', sans-serif" font-weight="700" font-size="10" fill="#ffffff" text-anchor="middle">PRO GRADE 1+</text>
+
+    <!-- Lower Blade Sticker -->
+    <rect x="372" y="410" width="56" height="40" rx="4" fill="#1e293b"/>
+    <text x="400" y="434" font-family="'Inter', sans-serif" font-weight="900" font-size="12" fill="#22c55e" text-anchor="middle">ENGLISH WILLOW</text>
+  </g>
+
+  <!-- Red Cricket Ball next to Bat -->
+  <circle cx="580" cy="440" r="45" fill="url(#ballGrad)"/>
+  <!-- Ball Seam Stitching -->
+  <path d="M 545 425 C 570 410, 600 460, 615 455" stroke="#ffffff" stroke-width="3" stroke-dasharray="4,3" fill="none"/>
+  <path d="M 545 425 C 570 410, 600 460, 615 455" stroke="#7f1d1d" stroke-width="1" fill="none"/>
+
+  <!-- Text Overlay -->
+  <rect x="40" y="40" width="280" height="46" rx="8" fill="#000000" opacity="0.6"/>
+  <text x="55" y="70" font-family="'Inter', sans-serif" font-weight="900" font-size="20" fill="#ffffff">KOOKABURRA KAHUNA</text>
+</svg>

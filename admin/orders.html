@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Orders – Admin Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans flex min-h-screen">
+
+  <aside class="w-64 bg-slate-900 border-r border-slate-800 p-4 shrink-0">
+    <a href="index.html" class="flex items-center gap-2 mb-8"><div class="bg-red-600 text-white p-1.5 rounded font-black text-lg">SH</div><span class="font-black text-xl text-white">Admin<span class="text-red-600">Hub</span></span></a>
+    <a href="index.html" class="text-xs font-bold text-slate-400 hover:text-white"><i class="fa-solid fa-arrow-left"></i> Dashboard</a>
+  </aside>
+
+  <main class="flex-1 p-8 space-y-6">
+    <h1 class="text-2xl font-black">ALL CUSTOMER ORDERS</h1>
+
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+      <table class="w-full text-left text-xs">
+        <thead class="bg-slate-800 text-slate-400 uppercase font-bold">
+          <tr>
+            <th class="p-3">Order ID</th>
+            <th class="p-3">Customer</th>
+            <th class="p-3">Date</th>
+            <th class="p-3">Amount</th>
+            <th class="p-3">Status</th>
+            <th class="p-3">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800 text-slate-300" id="adminOrdersTable"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="../assets/js/admin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('../data/orders.json')
+        .then(r => r.json())
+        .then(orders => {
+          const tbody = document.getElementById('adminOrdersTable');
+          tbody.innerHTML = orders.map(o => `
+            <tr>
+              <td class="p-3 font-bold text-white">#${o.orderId}</td>
+              <td class="p-3">${o.customerName}</td>
+              <td class="p-3 text-slate-400">${o.date}</td>
+              <td class="p-3 font-bold text-white">$${o.totalAmount.toFixed(2)}</td>
+              <td class="p-3">
+                <select onchange="window.updateOrderStatus('${o.orderId}', this.value)" class="bg-slate-950 border border-slate-700 text-white rounded px-2 py-1">
+                  <option ${o.status==='Pending'?'selected':''}>Pending</option>
+                  <option ${o.status==='Processing'?'selected':''}>Processing</option>
+                  <option ${o.status==='Shipped'?'selected':''}>Shipped</option>
+                  <option ${o.status==='Delivered'?'selected':''}>Delivered</option>
+                </select>
+              </td>
+              <td class="p-3">
+                <a href="order-details.html?id=${o.orderId}" class="text-red-400 font-bold hover:underline">View Details</a>
+              </td>
+            </tr>
+          `).join('');
+        });
+    });
+  </script>
+</body>
+</html>

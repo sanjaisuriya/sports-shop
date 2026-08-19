@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard – Sports & Cricket Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/theme.js"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans flex min-h-screen">
+
+  <!-- Admin Sidebar -->
+  <aside class="w-64 bg-slate-900 border-r border-slate-800 p-4 flex flex-col justify-between shrink-0">
+    <div>
+      <a href="index.html" class="flex items-center gap-2 mb-8">
+        <div class="bg-red-600 text-white p-1.5 rounded font-black text-lg">SH</div>
+        <span class="font-black text-xl text-white">Admin<span class="text-red-600">Hub</span></span>
+      </a>
+      <nav class="space-y-1 text-xs font-semibold">
+        <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-red-600 text-white"><i class="fa-solid fa-chart-line w-4"></i> Dashboard Overview</a>
+        <a href="products.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fa-solid fa-boxes-stacked w-4 text-red-500"></i> Multi-Sport Products</a>
+        <a href="categories.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fa-solid fa-tags w-4 text-red-500"></i> Categories</a>
+        <a href="brands.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fa-solid fa-copyright w-4 text-red-500"></i> Brands</a>
+        <a href="orders.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fa-solid fa-cart-shopping w-4 text-red-500"></i> Orders</a>
+        <a href="customers.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fa-solid fa-users w-4 text-red-500"></i> Customers</a>
+        <a href="team-kit-requests.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fa-solid fa-shirt w-4 text-red-500"></i> Team Kit Requests</a>
+        <a href="bulk-enquiries.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fa-solid fa-truck-ramp-box w-4 text-red-500"></i> Bulk Enquiries</a>
+        <a href="payments.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fa-solid fa-credit-card w-4 text-red-500"></i> Payments</a>
+        <a href="reviews.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fa-solid fa-star w-4 text-red-500"></i> Reviews</a>
+        <a href="reports.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fa-solid fa-file-contract w-4 text-red-500"></i> Reports</a>
+        <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-800 text-slate-300"><i class="fa-solid fa-gear w-4 text-red-500"></i> Settings</a>
+      </nav>
+    </div>
+    <div class="border-t border-slate-800 pt-4">
+      <a href="../index.html" class="text-xs text-slate-400 hover:text-white font-bold flex items-center gap-2"><i class="fa-solid fa-arrow-left"></i> Exit to Main Sports Store</a>
+    </div>
+  </aside>
+
+  <!-- Content -->
+  <main class="flex-1 p-8 space-y-8 overflow-y-auto">
+    <div class="flex justify-between items-center">
+      <div>
+        <h1 class="text-2xl font-black">SPORTS & CRICKET STORE ANALYTICS</h1>
+        <span class="text-xs text-slate-400">Live multi-sport sales and equipment inventory data for SportsHub</span>
+      </div>
+      <a href="add-product.html" class="btn-sh-primary text-xs py-2.5 px-4"><i class="fa-solid fa-plus mr-1"></i> Add New Product</a>
+    </div>
+
+    <!-- Analytics Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+        <span class="text-xs text-slate-400 font-bold uppercase tracking-wider block">Total Revenue</span>
+        <div class="text-3xl font-black text-white mt-1">$177,000</div>
+        <span class="text-[11px] text-green-400 mt-2 block"><i class="fa-solid fa-arrow-up"></i> +14.2% from multi-sport sales</span>
+      </div>
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+        <span class="text-xs text-slate-400 font-bold uppercase tracking-wider block">Total Orders</span>
+        <div class="text-3xl font-black text-white mt-1">1,420</div>
+        <span class="text-[11px] text-green-400 mt-2 block"><i class="fa-solid fa-arrow-up"></i> +8.5% new equipment orders</span>
+      </div>
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+        <span class="text-xs text-slate-400 font-bold uppercase tracking-wider block">Total Customers</span>
+        <div class="text-3xl font-black text-white mt-1">5,890</div>
+        <span class="text-[11px] text-blue-400 mt-2 block">120 Active Sports Clubs</span>
+      </div>
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+        <span class="text-xs text-slate-400 font-bold uppercase tracking-wider block">Pending Enquiries</span>
+        <div class="text-3xl font-black text-amber-400 mt-1">18</div>
+        <span class="text-[11px] text-slate-400 mt-2 block">Team Kits & Bulk Orders</span>
+      </div>
+    </div>
+
+    <!-- Charts Row -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <h3 class="font-bold text-sm text-slate-300 mb-4">Multi-Sport Revenue Trend (2026)</h3>
+        <canvas id="salesChart" class="max-h-64"></canvas>
+      </div>
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <h3 class="font-bold text-sm text-slate-300 mb-4">Sales Distribution by Sport Category</h3>
+        <canvas id="categoryChart" class="max-h-64"></canvas>
+      </div>
+    </div>
+
+    <!-- Recent Orders Table -->
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+      <h3 class="font-bold text-sm text-slate-300 mb-4">Recent Multi-Sport Equipment Orders</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs">
+          <thead class="bg-slate-800 text-slate-400 uppercase font-bold">
+            <tr>
+              <th class="p-3">Order ID</th>
+              <th class="p-3">Customer</th>
+              <th class="p-3">Category / Product</th>
+              <th class="p-3">Amount</th>
+              <th class="p-3">Payment</th>
+              <th class="p-3">Status</th>
+              <th class="p-3">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-slate-300" id="adminRecentOrders">
+            <tr>
+              <td class="p-3 font-bold">#SH-88405</td>
+              <td class="p-3">Carlos Rodriguez</td>
+              <td class="p-3 font-semibold"><i class="fa-solid fa-football-ball text-red-500 mr-1"></i> Nike Flight Match Football</td>
+              <td class="p-3 font-bold">$139.99</td>
+              <td class="p-3 text-green-400">Paid</td>
+              <td class="p-3"><span class="bg-amber-950 text-amber-400 border border-amber-800 px-2 py-0.5 rounded font-bold">Processing</span></td>
+              <td class="p-3"><a href="order-details.html?id=SH-88405" class="text-red-400 hover:underline font-bold">Manage</a></td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold">#SH-88401</td>
+              <td class="p-3">Rahul Sharma</td>
+              <td class="p-3 font-semibold"><i class="fa-solid fa-baseball-bat-ball text-red-500 mr-1"></i> Kookaburra Kahuna Bat</td>
+              <td class="p-3 font-bold">$499.99</td>
+              <td class="p-3 text-green-400">Paid</td>
+              <td class="p-3"><span class="bg-green-950 text-green-400 border border-green-800 px-2 py-0.5 rounded font-bold">Delivered</span></td>
+              <td class="p-3"><a href="order-details.html?id=SH-88401" class="text-red-400 hover:underline font-bold">Manage</a></td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold">#SH-88398</td>
+              <td class="p-3">Emma Watson</td>
+              <td class="p-3 font-semibold"><i class="fa-solid fa-dumbbell text-purple-400 mr-1"></i> Bowflex SelectTech Dumbbells</td>
+              <td class="p-3 font-bold">$429.00</td>
+              <td class="p-3 text-green-400">Paid</td>
+              <td class="p-3"><span class="bg-green-950 text-green-400 border border-green-800 px-2 py-0.5 rounded font-bold">Delivered</span></td>
+              <td class="p-3"><a href="order-details.html?id=SH-88398" class="text-red-400 hover:underline font-bold">Manage</a></td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold">#SH-88392</td>
+              <td class="p-3">James Wilson</td>
+              <td class="p-3 font-semibold"><i class="fa-solid fa-basketball-ball text-amber-400 mr-1"></i> Wilson NBA Game Basketball</td>
+              <td class="p-3 font-bold">$149.00</td>
+              <td class="p-3 text-green-400">Paid</td>
+              <td class="p-3"><span class="bg-green-950 text-green-400 border border-green-800 px-2 py-0.5 rounded font-bold">Delivered</span></td>
+              <td class="p-3"><a href="order-details.html?id=SH-88392" class="text-red-400 hover:underline font-bold">Manage</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="../assets/js/admin.js"></script>
+  <script src="../assets/js/charts.js"></script>
+</body>
+</html>

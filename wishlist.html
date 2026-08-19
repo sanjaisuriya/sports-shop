@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Wishlist – SportsHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased flex flex-col min-h-screen">
+
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="bg-red-600 text-white p-2 rounded-lg font-black text-xl leading-none">SH</div>
+        <span class="font-black text-xl text-slate-900 dark:text-white tracking-tight">SPORTS<span class="text-red-600">HUB</span></span>
+      </a>
+      <div class="flex items-center gap-4 text-xs font-bold">
+        <button onclick="window.toggleTheme()" class="hover:text-red-600 flex items-center gap-1">
+          <i class="fa-solid fa-moon sh-theme-icon-moon"></i>
+          <i class="fa-solid fa-sun sh-theme-icon-sun hidden text-amber-400"></i>
+          <span class="sh-theme-text">Theme</span>
+        </button>
+        <a href="shop.html" class="text-slate-500 hover:text-red-600"><i class="fa-solid fa-arrow-left"></i> Shop Catalog</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-12 flex-1 max-w-7xl mx-auto px-4 w-full">
+    <h1 class="text-3xl font-black text-slate-900 dark:text-white mb-8">MY SAVED WISHLIST</h1>
+    <div id="wishlistGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+  </main>
+
+  <footer class="bg-slate-950 text-slate-400 py-8 text-center text-xs border-t border-slate-800 mt-auto">
+    &copy; 2026 SportsHub Equipment Inc.
+  </footer>
+
+  <script src="assets/js/wishlist.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    window.renderWishlistPage = function() {
+      const items = window.SportsWishlist.getWishlist();
+      const grid = document.getElementById('wishlistGrid');
+      
+      if (items.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-12 text-center">
+            <i class="fa-regular fa-heart text-5xl text-slate-300 dark:text-slate-700 mb-3"></i>
+            <h3 class="font-bold text-lg text-slate-800 dark:text-slate-200">Your wishlist is empty</h3>
+            <p class="text-xs text-slate-500 mt-1 mb-6">Browse our sports shop and click the heart icon on any product to save it here.</p>
+            <a href="shop.html" class="btn-sh-primary text-xs">Explore Products</a>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = items.map(p => window.renderProductCard(p)).join('');
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      window.renderWishlistPage();
+    });
+  </script>
+</body>
+</html>

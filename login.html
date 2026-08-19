@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Login – SportsHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+</head>
+<body class="bg-slate-900 text-white font-sans antialiased flex flex-col min-h-screen justify-center items-center p-4">
+
+  <div class="max-w-md w-full bg-slate-800 border border-slate-700 rounded-2xl p-8 shadow-2xl space-y-6">
+    <div class="text-center">
+      <a href="index.html" class="inline-flex items-center gap-2 mb-4">
+        <div class="bg-red-600 text-white p-2 rounded-lg font-black text-xl leading-none">SH</div>
+        <span class="font-black text-2xl text-white tracking-tight">SPORTS<span class="text-red-600">HUB</span></span>
+      </a>
+      <h1 class="text-2xl font-black text-white">Welcome Back</h1>
+      <p class="text-xs text-slate-400 mt-1">Sign in to manage your orders, team kits, and wishlist.</p>
+    </div>
+
+    <form id="loginForm" class="space-y-4 text-xs font-semibold">
+      <div>
+        <label class="block text-slate-300 mb-1">Email Address</label>
+        <input type="email" required value="rahul.sharma@example.com" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-red-600">
+      </div>
+      <div>
+        <div class="flex justify-between items-center mb-1">
+          <label class="text-slate-300">Password</label>
+          <a href="#" class="text-red-400 hover:underline text-[11px]">Forgot password?</a>
+        </div>
+        <input type="password" required value="password123" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-red-600">
+      </div>
+
+      <div class="flex items-center gap-2 text-slate-300">
+        <input type="checkbox" id="rememberMe" class="accent-red-600">
+        <label for="rememberMe">Remember me on this browser</label>
+      </div>
+
+      <button type="submit" class="btn-sh-primary w-full justify-center text-sm py-3 mt-2">
+        <i class="fa-solid fa-right-to-bracket mr-2"></i> Sign In to Account
+      </button>
+    </form>
+
+    <div class="text-center text-xs text-slate-400 border-t border-slate-700 pt-4">
+      Don't have a SportsHub account? <a href="register.html" class="text-red-400 font-bold hover:underline">Register Now</a>
+    </div>
+  </div>
+
+  <script src="assets/js/forms.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

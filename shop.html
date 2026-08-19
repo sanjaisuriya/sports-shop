@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Sports Equipment – SportsHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased flex flex-col min-h-screen">
+
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="bg-red-600 text-white p-2 rounded-lg font-black text-xl leading-none">SH</div>
+        <span class="font-black text-xl text-slate-900 dark:text-white tracking-tight">SPORTS<span class="text-red-600">HUB</span></span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-6 font-semibold text-sm text-slate-700 dark:text-slate-200">
+        <a href="index.html" class="hover:text-red-600">Home</a>
+        <a href="cricket-home.html" class="hover:text-red-600">Cricket Special</a>
+        <a href="shop.html" class="text-red-600 font-bold">Shop All</a>
+        <a href="categories.html" class="hover:text-red-600">Categories</a>
+        <a href="brands.html" class="hover:text-red-600">Brands</a>
+        <a href="team-kits.html" class="hover:text-red-600">Team Kits</a>
+        <a href="bulk-orders.html" class="hover:text-red-600">Bulk Orders</a>
+        <a href="blog.html" class="hover:text-red-600">Blog</a>
+        <a href="contact.html" class="hover:text-red-600">Contact</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <button onclick="window.toggleTheme()" class="hover:text-red-600 text-xs font-bold transition flex items-center gap-1">
+          <i class="fa-solid fa-moon sh-theme-icon-moon"></i>
+          <i class="fa-solid fa-sun sh-theme-icon-sun hidden text-amber-400"></i>
+          <span class="sh-theme-text">Theme</span>
+        </button>
+        <a href="wishlist.html" class="relative p-2 text-slate-700 dark:text-slate-200">
+          <i class="fa-regular fa-heart text-xl"></i>
+          <span class="sh-wishlist-count absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </a>
+        <a href="cart.html" class="relative p-2 text-slate-700 dark:text-slate-200">
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+          <span class="sh-cart-count absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="bg-slate-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-3xl font-black">SPORTS EQUIPMENT CATALOG</h1>
+      <p class="text-slate-400 text-sm mt-1">Browse English Willow bats, match balls, footwear, tennis rackets, and athletic gear.</p>
+    </div>
+  </section>
+
+  <!-- Main Shop Layout -->
+  <section class="py-12 flex-1">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-4 gap-8">
+      
+      <!-- Filters Sidebar -->
+      <aside class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 h-fit space-y-6 shadow-sm">
+        <div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-3 border-b pb-2">Search Products</h3>
+          <input type="text" id="shopSearch" placeholder="Search bats, shoes, balls..." class="w-full bg-slate-100 dark:bg-slate-800 border rounded-lg px-3 py-2 text-xs focus:outline-none focus:border-red-600">
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-3 border-b pb-2">Sports Category</h3>
+          <select id="filterCategory" class="w-full bg-slate-100 dark:bg-slate-800 border rounded-lg px-3 py-2 text-xs">
+            <option value="all">All Categories</option>
+            <option value="cricket">Cricket</option>
+            <option value="football">Football</option>
+            <option value="basketball">Basketball</option>
+            <option value="tennis">Tennis</option>
+            <option value="badminton">Badminton</option>
+            <option value="volleyball">Volleyball</option>
+            <option value="fitness">Fitness & Gym</option>
+            <option value="running">Running & Athletics</option>
+            <option value="protective-gear">Protective Gear</option>
+            <option value="accessories">Sports Accessories</option>
+          </select>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-3 border-b pb-2">Brand</h3>
+          <select id="filterBrand" class="w-full bg-slate-100 dark:bg-slate-800 border rounded-lg px-3 py-2 text-xs">
+            <option value="all">All Brands</option>
+            <option value="kookaburra">Kookaburra</option>
+            <option value="gray-nicolls">Gray-Nicolls</option>
+            <option value="ss">SS Ton</option>
+            <option value="mrf">MRF Pace</option>
+            <option value="sg">SG Cricket</option>
+            <option value="new-balance">New Balance</option>
+            <option value="nike">Nike Sports</option>
+            <option value="adidas">Adidas Athletics</option>
+            <option value="puma">Puma Sport</option>
+            <option value="wilson">Wilson</option>
+            <option value="babolat">Babolat</option>
+            <option value="yonex">Yonex</option>
+          </select>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-3 border-b pb-2">Sort By</h3>
+          <select id="sortProducts" class="w-full bg-slate-100 dark:bg-slate-800 border rounded-lg px-3 py-2 text-xs">
+            <option value="default">Default Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+        </div>
+
+        <button onclick="document.getElementById('filterCategory').value='all'; document.getElementById('filterBrand').value='all'; document.getElementById('shopSearch').value=''; window.initShopFilters();" class="btn-sh-outline w-full justify-center text-xs">
+          Reset Filters
+        </button>
+      </aside>
+
+      <!-- Products Grid Display -->
+      <main class="lg:col-span-3">
+        <div class="flex items-center justify-between mb-6">
+          <span id="productCount" class="text-sm font-semibold text-slate-500">Loading products...</span>
+        </div>
+        <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+      </main>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-300 py-8 text-center text-xs border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 SportsHub Equipment Inc. All Rights Reserved.</p>
+      
+      <div class="flex items-center gap-3">
+        <span class="text-slate-400 font-bold">Follow Us:</span>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-slate-300 hover:bg-pink-600 hover:text-white transition shadow border border-slate-800" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-slate-300 hover:bg-blue-600 hover:text-white transition shadow border border-slate-800" title="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-slate-300 hover:bg-red-600 hover:text-white transition shadow border border-slate-800" title="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-slate-300 hover:bg-sky-500 hover:text-white transition shadow border border-slate-800" title="Twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/filters.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.initShopFilters();
+    });
+  </script>
+</body>
+</html>

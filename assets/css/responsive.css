@@ -1,0 +1,41 @@
+/* SportsHub Responsive Overrides */
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 2.25rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .sh-sidebar-nav {
+    display: none;
+  }
+  
+  .sh-mobile-nav-active {
+    display: block !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.75rem !important;
+  }
+  
+  .sh-toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  
+  .sh-toast {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .kit-preview-container {
+    height: 320px;
+  }
+  
+  .kit-jersey-svg {
+    width: 220px;
+    height: 250px;
+  }
+}

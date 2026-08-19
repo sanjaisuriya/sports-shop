@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart – SportsHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased flex flex-col min-h-screen">
+
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="bg-red-600 text-white p-2 rounded-lg font-black text-xl leading-none">SH</div>
+        <span class="font-black text-xl text-slate-900 dark:text-white tracking-tight">SPORTS<span class="text-red-600">HUB</span></span>
+      </a>
+      <div class="flex items-center gap-4 text-xs font-bold">
+        <button onclick="window.toggleTheme()" class="hover:text-red-600 flex items-center gap-1">
+          <i class="fa-solid fa-moon sh-theme-icon-moon"></i>
+          <i class="fa-solid fa-sun sh-theme-icon-sun hidden text-amber-400"></i>
+          <span class="sh-theme-text">Theme</span>
+        </button>
+        <a href="shop.html" class="text-slate-500 hover:text-red-600"><i class="fa-solid fa-arrow-left"></i> Continue Shopping</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-12 flex-1 max-w-7xl mx-auto px-4 w-full">
+    <h1 class="text-3xl font-black text-slate-900 dark:text-white mb-8">YOUR SHOPPING CART</h1>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Cart Items Table -->
+      <div class="lg:col-span-2 space-y-4" id="cartItemsList">
+        <div class="bg-white dark:bg-slate-900 border rounded-xl p-8 text-center text-slate-500">Loading cart...</div>
+      </div>
+
+      <!-- Order Summary Card -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 h-fit space-y-4 shadow-sm">
+        <h3 class="font-extrabold text-lg text-slate-900 dark:text-white border-b pb-3">Order Summary</h3>
+        <div class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+          <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span id="cartSubtotal" class="font-bold text-slate-900 dark:text-white">$0.00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Estimated Shipping</span>
+            <span class="text-green-600 font-bold">FREE</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Estimated Tax (5%)</span>
+            <span id="cartTax" class="font-bold text-slate-900 dark:text-white">$0.00</span>
+          </div>
+        </div>
+        <div class="border-t border-slate-200 dark:border-slate-700 pt-3 flex justify-between text-base font-black text-slate-900 dark:text-white">
+          <span>Total Amount</span>
+          <span id="cartGrandTotal" class="text-red-600">$0.00</span>
+        </div>
+        <button onclick="alert('Demo Checkout initialized! Thank you for testing SportsHub template.')" class="btn-sh-primary w-full justify-center text-sm py-3 mt-2">
+          Proceed to Checkout <i class="fa-solid fa-arrow-right ml-2"></i>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-950 text-slate-400 py-8 text-center text-xs border-t border-slate-800 mt-auto">
+    &copy; 2026 SportsHub Equipment Inc.
+  </footer>
+
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    window.renderCartPage = function() {
+      const cart = window.SportsCart.getCart();
+      const list = document.getElementById('cartItemsList');
+      
+      if (cart.length === 0) {
+        list.innerHTML = `
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-12 text-center">
+            <i class="fa-solid fa-cart-flatbed text-5xl text-slate-300 dark:text-slate-700 mb-3"></i>
+            <h3 class="font-bold text-lg text-slate-800 dark:text-slate-200">Your cart is currently empty</h3>
+            <p class="text-xs text-slate-500 mt-1 mb-6">Explore our store for English Willow bats, match balls, and sports gear.</p>
+            <a href="shop.html" class="btn-sh-primary text-xs">Explore Shop Catalog</a>
+          </div>
+        `;
+        document.getElementById('cartSubtotal').textContent = '$0.00';
+        document.getElementById('cartTax').textContent = '$0.00';
+        document.getElementById('cartGrandTotal').textContent = '$0.00';
+        return;
+      }
+
+      let subtotal = 0;
+      list.innerHTML = cart.map(item => {
+        const itemTotal = item.price * item.qty;
+        subtotal += itemTotal;
+        return `
+          <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4 w-full sm:w-auto">
+              <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg bg-slate-100 dark:bg-slate-800 p-1">
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white text-sm leading-snug">${item.name}</h4>
+                <span class="text-xs text-slate-500">$${item.price.toFixed(2)} each</span>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-6 w-full sm:w-auto justify-between">
+              <div class="flex items-center border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden bg-slate-50 dark:bg-slate-800">
+                <button onclick="window.SportsCart.updateQty('${item.id}', -1)" class="px-2.5 py-1 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">-</button>
+                <span class="px-3 text-xs font-bold text-slate-900 dark:text-white">${item.qty}</span>
+                <button onclick="window.SportsCart.updateQty('${item.id}', 1)" class="px-2.5 py-1 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">+</button>
+              </div>
+
+              <span class="font-black text-slate-900 dark:text-white text-base">$${itemTotal.toFixed(2)}</span>
+
+              <button onclick="window.SportsCart.removeItem('${item.id}')" class="text-slate-400 hover:text-red-600 text-base">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const tax = subtotal * 0.05;
+      const grand = subtotal + tax;
+
+      document.getElementById('cartSubtotal').textContent = `$${subtotal.toFixed(2)}`;
+      document.getElementById('cartTax').textContent = `$${tax.toFixed(2)}`;
+      document.getElementById('cartGrandTotal').textContent = `$${grand.toFixed(2)}`;
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      window.renderCartPage();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Product – Admin Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans flex min-h-screen">
+
+  <aside class="w-64 bg-slate-900 border-r border-slate-800 p-4 shrink-0">
+    <a href="index.html" class="flex items-center gap-2 mb-8"><div class="bg-red-600 text-white p-1.5 rounded font-black text-lg">SH</div><span class="font-black text-xl text-white">Admin<span class="text-red-600">Hub</span></span></a>
+    <a href="products.html" class="text-xs font-bold text-slate-400 hover:text-white"><i class="fa-solid fa-arrow-left"></i> Back to Products</a>
+  </aside>
+
+  <main class="flex-1 p-8">
+    <div class="max-w-2xl bg-slate-900 border border-slate-800 rounded-xl p-8 space-y-4">
+      <h1 class="text-xl font-black mb-4">EDIT PRODUCT (#prod-1)</h1>
+      <form onsubmit="event.preventDefault(); alert('Product Updated Successfully!'); window.location.href='products.html';" class="space-y-4 text-xs font-semibold">
+        <div>
+          <label class="block mb-1 text-slate-400">Product Name</label>
+          <input type="text" value="Kookaburra Kahuna Pro English Willow Bat" class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white">
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block mb-1 text-slate-400">Price ($)</label>
+            <input type="number" step="0.01" value="499.99" class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white">
+          </div>
+          <div>
+            <label class="block mb-1 text-slate-400">Stock Qty</label>
+            <input type="number" value="15" class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white">
+          </div>
+        </div>
+        <button type="submit" class="btn-sh-primary text-xs py-3 px-6">Save Product Changes</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

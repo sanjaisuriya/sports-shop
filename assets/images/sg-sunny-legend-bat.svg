@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+
+    <linearGradient id="turfGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+
+    <!-- Test Grade Gold Willow Wood Texture -->
+    <linearGradient id="willowGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f5e6ce"/>
+      <stop offset="25%" stop-color="#fff5e6"/>
+      <stop offset="50%" stop-color="#ebd8b8"/>
+      <stop offset="75%" stop-color="#fdf3e3"/>
+      <stop offset="100%" stop-color="#dac29d"/>
+    </linearGradient>
+
+    <!-- Handle Rubber Grip Gold/Black -->
+    <linearGradient id="gripGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ca8a04"/>
+      <stop offset="50%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Turf & Pitch -->
+  <rect width="800" height="600" fill="url(#bgGrad3)"/>
+  <ellipse cx="400" cy="480" rx="360" ry="90" fill="url(#turfGrad3)" opacity="0.9"/>
+
+  <!-- Shadow -->
+  <ellipse cx="380" cy="510" rx="220" ry="25" fill="#000000" opacity="0.5"/>
+
+  <!-- CRICKET BAT GRAPHIC (Diagonal Placement) -->
+  <g transform="translate(400, 300) rotate(-32) translate(-400, -300)">
+    
+    <!-- Rubber Grip Handle Top -->
+    <rect x="382" y="50" width="36" height="180" rx="18" fill="url(#gripGrad3)"/>
+    <line x1="382" y1="70" x2="418" y2="70" stroke="#854d0e" stroke-width="2"/>
+    <line x1="382" y1="90" x2="418" y2="90" stroke="#854d0e" stroke-width="2"/>
+    <line x1="382" y1="110" x2="418" y2="110" stroke="#854d0e" stroke-width="2"/>
+    <line x1="382" y1="130" x2="418" y2="130" stroke="#854d0e" stroke-width="2"/>
+    <line x1="382" y1="150" x2="418" y2="150" stroke="#854d0e" stroke-width="2"/>
+    <line x1="382" y1="170" x2="418" y2="170" stroke="#854d0e" stroke-width="2"/>
+    <line x1="382" y1="190" x2="418" y2="190" stroke="#854d0e" stroke-width="2"/>
+    <line x1="382" y1="210" x2="418" y2="210" stroke="#854d0e" stroke-width="2"/>
+
+    <!-- Handle Splice Connection -->
+    <polygon points="385,210 415,210 410,240 390,240" fill="#b45309"/>
+
+    <!-- Willow Bat Blade -->
+    <path d="M 370 230 
+             C 365 250, 360 300, 360 440 
+             C 360 480, 375 500, 400 500 
+             C 425 500, 440 480, 440 440 
+             C 440 300, 435 250, 430 230 
+             Z" 
+          fill="url(#willowGrad3)" stroke="#b45309" stroke-width="3"/>
+
+    <!-- Straight Grains (12 Grains for Test Grade) -->
+    <path d="M 372 250 L 372 480" stroke="#c7a77e" stroke-width="1.2" opacity="0.6"/>
+    <path d="M 378 245 L 378 485" stroke="#c7a77e" stroke-width="1.2" opacity="0.6"/>
+    <path d="M 384 240 L 384 488" stroke="#c7a77e" stroke-width="1.2" opacity="0.6"/>
+    <path d="M 390 238 L 390 490" stroke="#c7a77e" stroke-width="1.2" opacity="0.6"/>
+    <path d="M 396 236 L 396 492" stroke="#c7a77e" stroke-width="1.2" opacity="0.6"/>
+    <path d="M 400 235 L 400 495" stroke="#c7a77e" stroke-width="1.8" opacity="0.7"/>
+    <path d="M 404 236 L 404 492" stroke="#c7a77e" stroke-width="1.2" opacity="0.6"/>
+    <path d="M 410 238 L 410 490" stroke="#c7a77e" stroke-width="1.2" opacity="0.6"/>
+    <path d="M 416 240 L 416 488" stroke="#c7a77e" stroke-width="1.2" opacity="0.6"/>
+    <path d="M 422 245 L 422 485" stroke="#c7a77e" stroke-width="1.2" opacity="0.6"/>
+    <path d="M 428 250 L 428 480" stroke="#c7a77e" stroke-width="1.2" opacity="0.6"/>
+
+    <!-- Spine High-Power Ridge Highlight -->
+    <path d="M 400 240 L 400 485" stroke="#ffffff" stroke-width="3.5" opacity="0.4"/>
+
+    <!-- SG Brand Sticker Header -->
+    <rect x="365" y="250" width="70" height="95" rx="6" fill="#15803d"/>
+    <rect x="368" y="253" width="64" height="89" rx="4" fill="#0f172a"/>
+    <text x="400" y="285" font-family="'Inter', sans-serif" font-weight="900" font-size="26" fill="#facc15" text-anchor="middle">SG</text>
+    <text x="400" y="310" font-family="'Inter', sans-serif" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle">SUNNY GOLD</text>
+    <text x="400" y="330" font-family="'Inter', sans-serif" font-weight="700" font-size="9" fill="#22c55e" text-anchor="middle">TEST GRADE 1+</text>
+
+    <!-- Lower Blade Badge -->
+    <rect x="372" y="415" width="56" height="35" rx="4" fill="#1e293b"/>
+    <text x="400" y="437" font-family="'Inter', sans-serif" font-weight="900" font-size="11" fill="#facc15" text-anchor="middle">TEST MATCH</text>
+  </g>
+
+  <!-- Text Overlay -->
+  <rect x="40" y="40" width="310" height="46" rx="8" fill="#000000" opacity="0.6"/>
+  <text x="55" y="70" font-family="'Inter', sans-serif" font-weight="900" font-size="20" fill="#ffffff">SG SUNNY GOLD TEST BAT</text>
+</svg>

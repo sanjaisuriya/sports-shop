@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Pricing Packages – SportsHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased flex flex-col min-h-screen">
+
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="bg-red-600 text-white p-2 rounded-lg font-black text-xl leading-none">SH</div>
+        <span class="font-black text-xl text-slate-900 dark:text-white tracking-tight">SPORTS<span class="text-red-600">HUB</span></span>
+      </a>
+      <a href="index.html" class="text-xs font-bold text-slate-500 hover:text-red-600"><i class="fa-solid fa-arrow-left"></i> Home</a>
+    </div>
+  </header>
+
+  <section class="bg-slate-900 text-white py-12 text-center">
+    <h1 class="text-3xl lg:text-4xl font-black">TEAM & CLUB PACKAGES</h1>
+    <p class="text-slate-300 text-sm mt-1">Flat rate packages for tournament customization and team kit supply</p>
+  </section>
+
+  <main class="py-16 flex-1">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Package 1 -->
+      <div class="sh-card p-8 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Starter Team</span>
+          <h3 class="text-2xl font-black text-slate-900 dark:text-white mt-1 mb-4">BASIC KIT</h3>
+          <div class="text-4xl font-black text-slate-900 dark:text-white mb-6">$29<span class="text-xs text-slate-400 font-normal"> / player</span></div>
+          <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-300 mb-8">
+            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Standard Polyester Jersey</li>
+            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Single Color Printing</li>
+            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Printed Player Number</li>
+            <li class="text-slate-400 line-through"><i class="fa-solid fa-xmark text-slate-400 mr-2"></i> Custom Club Crest Logo</li>
+          </ul>
+        </div>
+        <a href="team-kits.html" class="btn-sh-outline justify-center text-xs">Choose Starter</a>
+      </div>
+
+      <!-- Package 2 Featured -->
+      <div class="sh-card p-8 flex flex-col justify-between border-2 border-red-600 relative scale-105 shadow-xl">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">Most Popular</span>
+        <div>
+          <span class="text-xs font-bold text-red-600 uppercase tracking-widest">Professional Team</span>
+          <h3 class="text-2xl font-black text-slate-900 dark:text-white mt-1 mb-4">PRO TOURNAMENT</h3>
+          <div class="text-4xl font-black text-slate-900 dark:text-white mb-6">$49<span class="text-xs text-slate-400 font-normal"> / player</span></div>
+          <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-300 mb-8">
+            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Micro-Mesh Breathable Fabric</li>
+            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Full Sublimation Printing</li>
+            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> High-Res Team Logo + Name & Number</li>
+            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Matching Shorts Included</li>
+          </ul>
+        </div>
+        <a href="team-kits.html" class="btn-sh-primary justify-center text-xs">Choose Professional</a>
+      </div>
+
+      <!-- Package 3 -->
+      <div class="sh-card p-8 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Elite Club</span>
+          <h3 class="text-2xl font-black text-slate-900 dark:text-white mt-1 mb-4">ELITE MATCH KIT</h3>
+          <div class="text-4xl font-black text-slate-900 dark:text-white mb-6">$79<span class="text-xs text-slate-400 font-normal"> / player</span></div>
+          <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-300 mb-8">
+            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Premium 4-Way Stretch Performance Fabric</li>
+            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Full Kit: Jersey, Shorts, Socks & Track Jacket</li>
+            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Embroidered Crest Option</li>
+            <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Priority Production (7 Days)</li>
+          </ul>
+        </div>
+        <a href="team-kits.html" class="btn-sh-outline justify-center text-xs">Choose Elite</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-slate-950 text-slate-400 py-8 text-center text-xs border-t border-slate-800 mt-auto">
+    &copy; 2026 SportsHub Pricing & Wholesale.
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

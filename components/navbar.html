@@ -1,0 +1,102 @@
+<!-- Navigation Bar Component -->
+<header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800 transition-colors">
+  <!-- Top Bar -->
+  <div class="bg-slate-900 text-white text-xs py-1.5 px-4 hidden md:block">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <span><i class="fa-solid fa-truck-fast text-red-500 mr-1"></i> Free Shipping on Orders Over $99</span>
+        <span><i class="fa-solid fa-phone text-red-500 mr-1"></i> 24/7 Helpline: +1 (800) 555-SPORT</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <button onclick="window.toggleRTL()" class="hover:text-red-400 transition" title="Toggle RTL/LTR">
+          <i class="fa-solid fa-language mr-1"></i> RTL / LTR
+        </button>
+        <button onclick="window.toggleTheme()" class="hover:text-red-400 transition flex items-center gap-1" title="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon sh-theme-icon-moon"></i>
+          <i class="fa-solid fa-sun sh-theme-icon-sun hidden text-amber-400"></i>
+          <span class="sh-theme-text">Theme</span>
+        </button>
+        <a href="login.html" class="hover:text-red-400 transition"><i class="fa-solid fa-user mr-1"></i> Account</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <!-- Brand Logo -->
+    <a href="index.html" class="flex items-center gap-2">
+      <div class="bg-red-600 text-white p-2 rounded-lg font-black text-xl leading-none">SH</div>
+      <div class="flex flex-col">
+        <span class="font-black text-xl text-slate-900 dark:text-white tracking-tight leading-tight">SPORTS<span class="text-red-600">HUB</span></span>
+        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest leading-none">Cricket & Equipment</span>
+      </div>
+    </a>
+
+    <!-- Navigation Links -->
+    <nav class="hidden lg:flex items-center gap-6 font-semibold text-sm text-slate-700 dark:text-slate-200">
+      <a href="index.html" class="hover:text-red-600 transition">Home</a>
+      <a href="cricket-home.html" class="text-red-600 font-bold hover:text-red-700 transition"><i class="fa-solid fa-baseball-bat-ball mr-1"></i>Cricket</a>
+      <a href="shop.html" class="hover:text-red-600 transition">Shop</a>
+      <a href="categories.html" class="hover:text-red-600 transition">Categories</a>
+      <a href="brands.html" class="hover:text-red-600 transition">Brands</a>
+      <a href="team-kits.html" class="hover:text-red-600 transition">Team Kits</a>
+      <a href="bulk-orders.html" class="hover:text-red-600 transition">Bulk Orders</a>
+      <a href="services.html" class="hover:text-red-600 transition">Services</a>
+      <a href="pricing.html" class="hover:text-red-600 transition">Pricing</a>
+      <a href="blog.html" class="hover:text-red-600 transition">Blog</a>
+      <a href="contact.html" class="hover:text-red-600 transition">Contact</a>
+    </nav>
+
+    <!-- Search & Cart Actions -->
+    <div class="flex items-center gap-3">
+      <!-- Search Input -->
+      <div class="relative hidden sm:block w-48 xl:w-64">
+        <input type="text" placeholder="Search equipment..." class="sh-search-input w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full py-1.5 pl-4 pr-9 text-xs focus:outline-none focus:border-red-600">
+        <i class="fa-solid fa-magnifying-glass absolute right-3 top-2.5 text-slate-400 text-xs"></i>
+      </div>
+
+      <!-- Wishlist -->
+      <a href="wishlist.html" class="relative p-2 text-slate-700 dark:text-slate-200 hover:text-red-600 transition">
+        <i class="fa-regular fa-heart text-xl"></i>
+        <span class="sh-wishlist-count absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+      </a>
+
+      <!-- Cart -->
+      <a href="cart.html" class="relative p-2 text-slate-700 dark:text-slate-200 hover:text-red-600 transition">
+        <i class="fa-solid fa-cart-shopping text-xl"></i>
+        <span class="sh-cart-count absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+      </a>
+
+      <!-- User Portal Dropdown -->
+      <a href="customer/dashboard.html" class="p-2 text-slate-700 dark:text-slate-200 hover:text-red-600 transition" title="Customer Portal">
+        <i class="fa-regular fa-circle-user text-xl"></i>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button onclick="document.getElementById('mobileNavDrawer').classList.toggle('hidden')" class="lg:hidden p-2 text-slate-800 dark:text-slate-100 text-xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileNavDrawer" class="hidden lg:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 py-4 space-y-3">
+    <input type="text" placeholder="Search equipment..." class="sh-search-input w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg py-2 px-3 text-xs mb-2">
+    <div class="grid grid-cols-2 gap-2 text-sm font-semibold text-slate-800 dark:text-slate-200">
+      <a href="index.html" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Home</a>
+      <a href="cricket-home.html" class="p-2 text-red-600 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Cricket Special</a>
+      <a href="shop.html" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Shop All</a>
+      <a href="categories.html" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Categories</a>
+      <a href="brands.html" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Brands</a>
+      <a href="team-kits.html" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Team Kits</a>
+      <a href="bulk-orders.html" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Bulk Orders</a>
+      <a href="about.html" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">About Us</a>
+      <a href="services.html" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Services</a>
+      <a href="pricing.html" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Pricing</a>
+      <a href="blog.html" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Blog</a>
+      <a href="contact.html" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Contact</a>
+      <a href="customer/dashboard.html" class="p-2 text-blue-600 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Customer Portal</a>
+      <a href="admin/index.html" class="p-2 text-purple-600 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 rounded">Admin Portal</a>
+    </div>
+  </div>
+</header>

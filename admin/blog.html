@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Blog – Admin Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans flex min-h-screen">
+
+  <aside class="w-64 bg-slate-900 border-r border-slate-800 p-4 shrink-0">
+    <a href="index.html" class="flex items-center gap-2 mb-8"><div class="bg-red-600 text-white p-1.5 rounded font-black text-lg">SH</div><span class="font-black text-xl text-white">Admin<span class="text-red-600">Hub</span></span></a>
+    <a href="index.html" class="text-xs font-bold text-slate-400 hover:text-white"><i class="fa-solid fa-arrow-left"></i> Dashboard</a>
+  </aside>
+
+  <main class="flex-1 p-8 space-y-6">
+    <div class="flex justify-between items-center">
+      <h1 class="text-2xl font-black">BLOG POST MANAGEMENT</h1>
+      <button onclick="alert('Create Post Modal')" class="btn-sh-primary text-xs py-2 px-4"><i class="fa-solid fa-plus mr-1"></i> New Article</button>
+    </div>
+
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+      <table class="w-full text-left text-xs">
+        <thead class="bg-slate-800 text-slate-400 uppercase font-bold">
+          <tr>
+            <th class="p-3">Title</th>
+            <th class="p-3">Category</th>
+            <th class="p-3">Author</th>
+            <th class="p-3">Date</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800 text-slate-300" id="adminBlogTable"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('../data/blog.json')
+        .then(r => r.json())
+        .then(posts => {
+          const tbody = document.getElementById('adminBlogTable');
+          tbody.innerHTML = posts.map(b => `
+            <tr>
+              <td class="p-3 font-bold text-white">${b.title}</td>
+              <td class="p-3 text-red-400 font-bold">${b.category}</td>
+              <td class="p-3">${b.author}</td>
+              <td class="p-3 text-slate-400">${b.date}</td>
+            </tr>
+          `).join('');
+        });
+    });
+  </script>
+</body>
+</html>

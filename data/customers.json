@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cust-1",
+    "name": "Rahul Sharma",
+    "email": "rahul.sharma@example.com",
+    "phone": "+91 98765 43210",
+    "ordersCount": 12,
+    "totalSpent": 3450.00,
+    "status": "Active",
+    "joinedDate": "2024-03-15"
+  },
+  {
+    "id": "cust-2",
+    "name": "David Smith",
+    "email": "david.smith@example.com",
+    "phone": "+61 412 345 678",
+    "ordersCount": 5,
+    "totalSpent": 1280.50,
+    "status": "Active",
+    "joinedDate": "2024-08-10"
+  },
+  {
+    "id": "cust-3",
+    "name": "Sarah Connor",
+    "email": "sarah.c@example.com",
+    "phone": "+1 555 019 2831",
+    "ordersCount": 8,
+    "totalSpent": 2100.00,
+    "status": "Active",
+    "joinedDate": "2025-01-22"
+  },
+  {
+    "id": "cust-4",
+    "name": "Apex Cricket Club (Rep: James Wilson)",
+    "email": "orders@apexcc.org",
+    "phone": "+44 20 7946 0912",
+    "ordersCount": 19,
+    "totalSpent": 15400.00,
+    "status": "VIP Commercial",
+    "joinedDate": "2023-11-01"
+  }
+]

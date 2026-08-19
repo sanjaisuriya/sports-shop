@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details – SportsHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased flex flex-col min-h-screen">
+
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="bg-red-600 text-white p-2 rounded-lg font-black text-xl leading-none">SH</div>
+        <span class="font-black text-xl text-slate-900 dark:text-white tracking-tight">SPORTS<span class="text-red-600">HUB</span></span>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="shop.html" class="text-xs font-bold text-slate-600 hover:text-red-600"><i class="fa-solid fa-arrow-left mr-1"></i> Back to Shop</a>
+        <a href="cart.html" class="relative p-2 text-slate-700 dark:text-slate-200">
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+          <span class="sh-cart-count absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Detail Container -->
+  <main class="py-12 flex-1">
+    <div class="max-w-7xl mx-auto px-4">
+      <div id="productDetailContent" class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 lg:p-10 shadow-sm">
+        <div class="text-center py-12 text-slate-500">Loading product information...</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-950 text-slate-400 py-8 text-center text-xs border-t border-slate-800 mt-auto">
+    &copy; 2026 SportsHub Equipment Inc.
+  </footer>
+
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const prodId = urlParams.get('id') || 'prod-1';
+      
+      function renderDetail(products) {
+        const product = products.find(p => p.id === prodId) || products[0];
+        const container = document.getElementById('productDetailContent');
+        
+        container.innerHTML = `
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Gallery -->
+            <div>
+              <div class="bg-slate-100 dark:bg-slate-800 rounded-2xl overflow-hidden h-96 flex items-center justify-center p-6 border">
+                <img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover rounded-xl">
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-bold text-red-600 uppercase tracking-widest">${product.category} | ${product.brand}</span>
+                <h1 class="text-3xl font-black text-slate-900 dark:text-white mt-1 mb-3">${product.name}</h1>
+                
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="text-amber-400 text-sm font-bold"><i class="fa-solid fa-star"></i> ${product.rating}</div>
+                  <span class="text-xs text-slate-400">|</span>
+                  <span class="text-xs text-slate-500">${product.reviewsCount} Customer Reviews</span>
+                  <span class="text-xs text-slate-400">|</span>
+                  <span class="text-xs font-bold text-green-600"><i class="fa-solid fa-circle-check"></i> In Stock (${product.stockQty} left)</span>
+                </div>
+
+                <div class="text-3xl font-black text-slate-900 dark:text-white mb-6">
+                  $${product.price.toFixed(2)}
+                  ${product.originalPrice ? `<span class="text-base text-slate-400 line-through font-normal ml-2">$${product.originalPrice.toFixed(2)}</span>` : ''}
+                </div>
+
+                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                  ${product.description}
+                </p>
+
+                <!-- Specs Table -->
+                <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4 mb-6 border text-xs space-y-2">
+                  <div class="font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-2">Technical Specifications</div>
+                  ${Object.entries(product.specifications || {}).map(([k, v]) => `
+                    <div class="flex justify-between border-b border-slate-200 dark:border-slate-700 pb-1">
+                      <span class="text-slate-500">${k}:</span>
+                      <span class="font-bold text-slate-800 dark:text-slate-200">${v}</span>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="flex items-center gap-4">
+                <button onclick="window.SportsCart.addItem(${JSON.stringify(product).replace(/"/g, '&quot;')})" class="btn-sh-primary flex-1 justify-center text-sm py-3">
+                  <i class="fa-solid fa-cart-shopping mr-2"></i> Add to Cart
+                </button>
+                <button onclick="window.SportsWishlist.toggleItem(${JSON.stringify(product).replace(/"/g, '&quot;')})" class="btn-sh-outline p-3">
+                  <i class="fa-regular fa-heart text-xl"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      fetch('data/products.json')
+        .then(res => res.json())
+        .then(products => renderDetail(products))
+        .catch(() => renderDetail(window.PRODUCTS_DATA || []));
+    });
+  </script>
+</body>
+</html>

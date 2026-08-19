@@ -1,0 +1,30 @@
+/* RTL Support Overrides */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .ml-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+[dir="rtl"] .mr-auto {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+
+[dir="rtl"] .sh-toast-container {
+  right: auto;
+  left: 1.5rem;
+}
+
+[dir="rtl"] .sh-toast {
+  border-left: none;
+  border-right: 4px solid var(--sh-secondary);
+}
+
+[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]),
+[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}

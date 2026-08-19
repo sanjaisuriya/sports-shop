@@ -1,0 +1,80 @@
+[
+  {
+    "id": "blog-1",
+    "title": "How to Select the Perfect English Willow Bat for Your Playing Style",
+    "slug": "select-english-willow-bat",
+    "category": "Cricket Tips",
+    "author": "Coach Mark Davies",
+    "date": "August 12, 2026",
+    "readTime": "6 min read",
+    "image": "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80",
+    "summary": "Discover how grain count, handle flexibility, weight distribution, and sweet spot location impact your boundary hitting power.",
+    "content": "When selecting a Grade 1 English Willow bat, player stance and swing velocity dictate the ideal balance profile. Low sweet spots favor subcontinent front-foot drives, while mid-to-high balance profiles maximize back-foot pull shots.",
+    "featured": true
+  },
+  {
+    "id": "blog-2",
+    "title": "Essential Pre-Season Fitness & Mobility Training for Pace Bowlers",
+    "slug": "fitness-training-pace-bowlers",
+    "category": "Training & Fitness",
+    "author": "Dr. Aris Thorne",
+    "date": "August 08, 2026",
+    "readTime": "8 min read",
+    "image": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+    "summary": "Build shoulder stability, core anti-rotation power, and explosive run-up speed to prevent lumbar stress fractures.",
+    "content": "Fast bowling puts up to 9x bodyweight strain on the lower spine during foot strike. Strengthening glute medius and thoracic spine rotational mobility drastically reduces stress injury risk.",
+    "featured": false
+  },
+  {
+    "id": "blog-3",
+    "title": "Designing Custom Team Kits: Fabric Selection & Sublimation Printing",
+    "slug": "custom-team-kit-fabric-guide",
+    "category": "Team Management",
+    "author": "Elena Rostova",
+    "date": "July 29, 2026",
+    "readTime": "5 min read",
+    "image": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80",
+    "summary": "A deep dive into moisture-wicking micro-mesh polyester, 4-way stretch fabrics, and eco-friendly dye sublimation.",
+    "content": "Dye sublimation infuses pigments directly into synthetic fibers under extreme heat, guaranteeing zero color fading or peeling after 100+ match wash cycles.",
+    "featured": false
+  },
+  {
+    "id": "blog-4",
+    "title": "Maintenance 101: Oiling and Linseed Protection for New Bats",
+    "slug": "cricket-bat-maintenance-oiling-guide",
+    "category": "Buying Guides",
+    "author": "James Watson",
+    "date": "July 18, 2026",
+    "readTime": "7 min read",
+    "image": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=800&q=80",
+    "summary": "Step-by-step instructions for applying raw linseed oil and bone rollers without over-saturating the toe.",
+    "content": "Apply 2 to 3 light coats of raw linseed oil, allowing 24 hours drying time between applications. Avoid oiling the handle rubber or spline splice.",
+    "featured": false
+  },
+  {
+    "id": "blog-5",
+    "title": "Choosing Between Metal Spikes and Rubber Studs for Grass Pitches",
+    "slug": "cricket-spikes-vs-rubber-studs",
+    "category": "Equipment Guides",
+    "author": "Coach Mark Davies",
+    "date": "July 05, 2026",
+    "readTime": "4 min read",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+    "summary": "Evaluate pitch moisture, turf hardness, and bowling ankle support when selecting spike outsole configurations.",
+    "content": "Metal spikes offer superior traction on soft damp turf, whereas hybrid rubber studs protect joints on hard synthetic artificial wickets.",
+    "featured": false
+  },
+  {
+    "id": "blog-6",
+    "title": "Top 5 FIFA Quality Match Balls Tested for Flight Stability",
+    "slug": "top-fifa-match-footballs-tested",
+    "category": "Sports News",
+    "author": "Carlos Silva",
+    "date": "June 22, 2026",
+    "readTime": "6 min read",
+    "image": "https://images.unsplash.com/photo-1614632537190-23e4146777db?auto=format&fit=crop&w=800&q=80",
+    "summary": "Analyzing panel geometry, thermal bonding, and aerodynamic surface grooves for match accuracy.",
+    "content": "Thermally bonded 12-panel configurations eliminate moisture absorption during rain games, preserving ball weight and spin trajectory.",
+    "featured": false
+  }
+]
