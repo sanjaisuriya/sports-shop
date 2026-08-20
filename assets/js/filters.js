@@ -99,15 +99,19 @@
 
         // Strict Keyword Matching Rules:
         if (query === 'bat' || query === 'bats') {
-          matchQuery = subcategory.includes('bat') || name.includes(' bat');
+          matchQuery = subcategory.includes('bat') || name.includes('bat');
         } else if (query === 'shoe' || query === 'shoes' || query === 'boot' || query === 'boots' || query === 'spike' || query === 'spikes') {
           matchQuery = name.includes('shoe') || name.includes('boot') || name.includes('spike') || subcategory.includes('shoe') || subcategory.includes('boot');
         } else if (query === 'ball' || query === 'balls') {
-          matchQuery = name.includes('ball') || subcategory.includes('ball') || category.includes('football') || category.includes('basketball') || category.includes('volleyball');
+          matchQuery = name.includes('ball') || subcategory.includes('ball');
         } else if (query === 'glove' || query === 'gloves') {
           matchQuery = name.includes('glove') || subcategory.includes('glove');
+        } else if (query === 'helmet' || query === 'helmets') {
+          matchQuery = name.includes('helmet') || subcategory.includes('helmet');
         } else if (query === 'racket' || query === 'rackets') {
           matchQuery = name.includes('racket') || subcategory.includes('racket');
+        } else if (query === 'pad' || query === 'pads' || query === 'guard' || query === 'guards' || query === 'armor') {
+          matchQuery = name.includes('pad') || name.includes('guard') || name.includes('armor') || subcategory.includes('pad') || subcategory.includes('guard');
         } else {
           // Broad multi-attribute search for categories, brands, specs, names & descriptions
           matchQuery = name.includes(query) || 
@@ -133,11 +137,17 @@
         const brandName = p.brand.toLowerCase();
 
         if (query === 'bat' || query === 'bats') {
-          return subcategory.includes('bat') || name.includes(' bat');
+          return subcategory.includes('bat') || name.includes('bat');
         } else if (query === 'shoe' || query === 'shoes' || query === 'boot' || query === 'boots' || query === 'spike' || query === 'spikes') {
           return name.includes('shoe') || name.includes('boot') || name.includes('spike') || subcategory.includes('shoe') || subcategory.includes('boot');
         } else if (query === 'ball' || query === 'balls') {
           return name.includes('ball') || subcategory.includes('ball');
+        } else if (query === 'glove' || query === 'gloves') {
+          return name.includes('glove') || subcategory.includes('glove');
+        } else if (query === 'helmet' || query === 'helmets') {
+          return name.includes('helmet') || subcategory.includes('helmet');
+        } else if (query === 'racket' || query === 'rackets') {
+          return name.includes('racket') || subcategory.includes('racket');
         } else {
           return name.includes(query) || category.includes(query) || subcategory.includes(query) || brandName.includes(query);
         }

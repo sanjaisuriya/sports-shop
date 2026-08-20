@@ -13,32 +13,53 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/rtl.js"></script>
 </head>
-<body class="bg-slate-900 text-white font-sans antialiased flex flex-col min-h-screen justify-center items-center p-4">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased flex flex-col min-h-screen justify-center items-center p-4 relative transition-colors duration-200">
 
-  <div class="max-w-md w-full bg-slate-800 border border-slate-700 rounded-2xl p-8 shadow-2xl space-y-6">
+  <!-- Top Corner Control Bar: Home Link, RTL/LTR Toggle, Dark/Light Theme Toggle -->
+  <div class="fixed top-4 right-4 z-50 flex items-center gap-2 bg-white/90 dark:bg-slate-900/90 backdrop-blur p-2 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xl">
+    <a href="index.html" class="p-2 text-slate-700 dark:text-slate-200 hover:text-red-600 transition text-xs font-bold flex items-center gap-1.5" title="Back to Store">
+      <i class="fa-solid fa-house"></i>
+      <span class="hidden sm:inline">Store</span>
+    </a>
+    
+    <div class="h-4 w-px bg-slate-200 dark:bg-slate-800"></div>
+
+    <!-- RTL/LTR Toggle -->
+    <button onclick="window.toggleRTL()" class="p-2 text-slate-700 dark:text-slate-200 hover:text-red-600 transition text-lg" title="Toggle Layout Direction (RTL / LTR)">
+      <i class="fa-solid fa-right-left"></i>
+    </button>
+
+    <!-- Theme Dark/Light Mode Toggle -->
+    <button onclick="window.toggleTheme()" class="p-2 text-slate-700 dark:text-slate-200 hover:text-red-600 transition text-lg" title="Toggle Dark/Light Mode">
+      <i class="fa-solid fa-moon sh-theme-icon-moon"></i>
+      <i class="fa-solid fa-sun sh-theme-icon-sun hidden text-amber-400"></i>
+    </button>
+  </div>
+
+  <div class="max-w-md w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 shadow-2xl space-y-6">
     <div class="text-center">
       <a href="index.html" class="inline-flex items-center gap-2 mb-4">
         <div class="bg-red-600 text-white p-2 rounded-lg font-black text-xl leading-none">SH</div>
-        <span class="font-black text-2xl text-white tracking-tight">SPORTS<span class="text-red-600">HUB</span></span>
+        <span class="font-black text-2xl text-slate-900 dark:text-white tracking-tight">SPORTS<span class="text-red-600">HUB</span></span>
       </a>
-      <h1 class="text-2xl font-black text-white">Welcome Back</h1>
-      <p class="text-xs text-slate-400 mt-1">Sign in to manage your orders, team kits, and wishlist.</p>
+      <h1 class="text-2xl font-black text-slate-900 dark:text-white">Welcome Back</h1>
+      <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sign in to manage your orders, team kits, and wishlist.</p>
     </div>
 
     <form id="loginForm" class="space-y-4 text-xs font-semibold">
       <div>
-        <label class="block text-slate-300 mb-1">Email Address</label>
-        <input type="email" required value="rahul.sharma@example.com" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-red-600">
+        <label class="block text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
+        <input type="email" required value="rahul.sharma@example.com" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-lg p-3 text-slate-900 dark:text-white focus:outline-none focus:border-red-600">
       </div>
       <div>
         <div class="flex justify-between items-center mb-1">
-          <label class="text-slate-300">Password</label>
-          <a href="#" class="text-red-400 hover:underline text-[11px]">Forgot password?</a>
+          <label class="text-slate-700 dark:text-slate-300">Password</label>
+          <a href="#" class="text-red-600 dark:text-red-400 hover:underline text-[11px]">Forgot password?</a>
         </div>
-        <input type="password" required value="password123" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-red-600">
+        <input type="password" required value="password123" class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-lg p-3 text-slate-900 dark:text-white focus:outline-none focus:border-red-600">
       </div>
 
-      <div class="flex items-center gap-2 text-slate-300">
+      <div class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
         <input type="checkbox" id="rememberMe" class="accent-red-600">
         <label for="rememberMe">Remember me on this browser</label>
       </div>
@@ -48,8 +69,8 @@
       </button>
     </form>
 
-    <div class="text-center text-xs text-slate-400 border-t border-slate-700 pt-4">
-      Don't have a SportsHub account? <a href="register.html" class="text-red-400 font-bold hover:underline">Register Now</a>
+    <div class="text-center text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 pt-4">
+      Don't have a SportsHub account? <a href="register.html" class="text-red-600 dark:text-red-400 font-bold hover:underline">Register Now</a>
     </div>
   </div>
 

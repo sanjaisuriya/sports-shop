@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b91c1c"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Athletics Track & Shoe Silhouette -->
+  <g filter="url(#shadow)" transform="translate(200, 100)">
+    <!-- Shoe Upper -->
+    <path d="M 60 210 L 90 110 C 130 80 240 100 320 150 C 400 200 460 210 500 210 C 530 220 540 240 520 260 C 470 280 380 280 300 280 L 60 280 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="4"/>
+    <path d="M 50 280 L 530 280 C 540 295 520 315 480 315 L 70 315 C 50 315 40 295 50 280 Z" fill="#ef4444"/>
+    <path d="M 180 130 L 260 200" stroke="#b91c1c" stroke-width="8"/>
+  </g>
+
+  <!-- Category Title -->
+  <rect x="230" y="400" width="340" height="44" rx="22" fill="#dc2626"/>
+  <text x="400" y="428" font-family="Arial, sans-serif" font-weight="900" font-size="18" fill="#ffffff" text-anchor="middle" letter-spacing="2">RUNNING &amp; ATHLETICS</text>
+</svg>

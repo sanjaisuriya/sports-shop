@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="ballGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a3e635"/>
+      <stop offset="100%" stop-color="#65a30d"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Tennis Court Lines -->
+  <rect x="100" y="80" width="600" height="340" fill="none" stroke="#60a5fa" stroke-width="4" opacity="0.3"/>
+  <line x1="400" y1="80" x2="400" y2="420" stroke="#60a5fa" stroke-width="4" opacity="0.3"/>
+
+  <!-- Tennis Racket & Ball -->
+  <g filter="url(#shadow)" transform="translate(320, 80)">
+    <!-- Racket Head -->
+    <ellipse cx="140" cy="150" rx="90" ry="120" fill="none" stroke="#dc2626" stroke-width="14"/>
+    <!-- Strings -->
+    <path d="M 80 150 L 200 150 M 90 100 L 190 100 M 90 200 L 190 200 M 140 50 L 140 250 M 100 70 L 100 230 M 180 70 L 180 230" fill="none" stroke="#94a3b8" stroke-width="2"/>
+    <!-- Handle -->
+    <rect x="130" y="270" width="20" height="120" fill="#0f172a" stroke="#cbd5e1" stroke-width="3"/>
+
+    <!-- Tennis Ball -->
+    <g transform="translate(0, 180)">
+      <circle cx="50" cy="50" r="45" fill="url(#ballGrad)"/>
+      <path d="M 20 20 Q 50 50 20 80" fill="none" stroke="#ffffff" stroke-width="4"/>
+      <path d="M 80 20 Q 50 50 80 80" fill="none" stroke="#ffffff" stroke-width="4"/>
+    </g>
+  </g>
+
+  <!-- Category Title -->
+  <rect x="260" y="400" width="280" height="44" rx="22" fill="#2563eb"/>
+  <text x="400" y="428" font-family="Arial, sans-serif" font-weight="900" font-size="18" fill="#ffffff" text-anchor="middle" letter-spacing="2">TENNIS GEAR</text>
+</svg>

@@ -5,7 +5,7 @@
     "slug": "cricket",
     "itemCount": 420,
     "icon": "fa-baseball-bat-ball",
-    "image": "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=600&q=80",
+    "image": "assets/images/sg-sunny-legend-bat.svg",
     "description": "Professional Grade 1 English & Kashmir Willow bats, Test match pads, titanium helmets, leather balls & spikes."
   },
   {
@@ -14,7 +14,7 @@
     "slug": "football",
     "itemCount": 280,
     "icon": "fa-football-ball",
-    "image": "https://images.unsplash.com/photo-1614632537190-23e4146777db?auto=format&fit=crop&w=600&q=80",
+    "image": "assets/images/cat-football.svg",
     "description": "FIFA Quality Pro match footballs, AG/FG stud boots, goalkeeper gloves, shin guards & custom team kits."
   },
   {
@@ -23,7 +23,7 @@
     "slug": "basketball",
     "itemCount": 190,
     "icon": "fa-basketball-ball",
-    "image": "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=600&q=80",
+    "image": "assets/images/cat-basketball.svg",
     "description": "Official composite leather game basketballs, high-top sneakers, breakaway rims, nets & jerseys."
   },
   {
@@ -32,7 +32,7 @@
     "slug": "tennis",
     "itemCount": 155,
     "icon": "fa-table-tennis-paddle-ball",
-    "image": "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=600&q=80",
+    "image": "assets/images/cat-tennis.svg",
     "description": "Pro carbon graphite rackets, pressurized match balls, dampeners, strings & clay/hard court shoes."
   },
   {
@@ -41,7 +41,7 @@
     "slug": "badminton",
     "itemCount": 130,
     "icon": "fa-feather",
-    "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=600&q=80",
+    "image": "assets/images/cat-badminton.svg",
     "description": "Goose feather shuttles, ultra-light carbon rackets, non-marking indoor court shoes & kit bags."
   },
   {
@@ -50,7 +50,7 @@
     "slug": "volleyball",
     "itemCount": 85,
     "icon": "fa-volleyball-ball",
-    "image": "https://images.unsplash.com/photo-1592656094267-764a45160876?auto=format&fit=crop&w=600&q=80",
+    "image": "assets/images/cat-volleyball.svg",
     "description": "18-panel soft leather match balls, protective knee pads, beach volleyball nets & referee equipment."
   },
   {
@@ -59,7 +59,7 @@
     "slug": "fitness",
     "itemCount": 310,
     "icon": "fa-dumbbell",
-    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80",
+    "image": "assets/images/cat-fitness.svg",
     "description": "Adjustable dumbbells, rubber kettlebells, heavy duty benches, resistance bands & power racks."
   },
   {
@@ -68,7 +68,7 @@
     "slug": "running",
     "itemCount": 245,
     "icon": "fa-person-running",
-    "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=600&q=80",
+    "image": "assets/images/cat-running.svg",
     "description": "Carbon-plated marathons shoes, track sprint spikes, hydration vests, compression tights & GPS watches."
   },
   {
@@ -77,7 +77,7 @@
     "slug": "protective-gear",
     "itemCount": 175,
     "icon": "fa-shield-halved",
-    "image": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=600&q=80",
+    "image": "assets/images/cricket-test-gear.svg",
     "description": "Test grade chest guards, thigh pads, arm guards, inner gloves, groin cups & helmet covers."
   },
   {
@@ -86,7 +86,7 @@
     "slug": "accessories",
     "itemCount": 220,
     "icon": "fa-toolbox",
-    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
+    "image": "assets/images/cat-accessories.svg",
     "description": "Bat grips, scuff sheets, linseed oil, ball mallets, sweatbands, water bottles & duffle kit bags."
   }
 ]

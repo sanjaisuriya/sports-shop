@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <circle cx="400" cy="270" r="210" fill="#eab308" opacity="0.08"/>
+
+  <!-- Wicket Keeping Pads & Webbed Gloves Combo -->
+  <g filter="url(#shadow)" transform="translate(180, 80)">
+    <!-- WK Pad Left -->
+    <rect x="80" y="80" width="90" height="300" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="4"/>
+    <!-- Pad Ribs -->
+    <rect x="90" y="110" width="70" height="40" rx="8" fill="#e2e8f0"/>
+    <rect x="90" y="160" width="70" height="40" rx="8" fill="#e2e8f0"/>
+    <rect x="90" y="210" width="70" height="40" rx="8" fill="#e2e8f0"/>
+    <circle cx="125" cy="280" r="22" fill="url(#goldGrad)"/>
+    <text x="125" y="286" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#0f172a" text-anchor="middle">SG</text>
+
+    <!-- WK Pad Right -->
+    <rect x="190" y="80" width="90" height="300" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="4"/>
+    <rect x="200" y="110" width="70" height="40" rx="8" fill="#e2e8f0"/>
+    <rect x="200" y="160" width="70" height="40" rx="8" fill="#e2e8f0"/>
+    <rect x="200" y="210" width="70" height="40" rx="8" fill="#e2e8f0"/>
+    <circle cx="235" cy="280" r="22" fill="url(#goldGrad)"/>
+    <text x="235" y="286" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#0f172a" text-anchor="middle">SG</text>
+
+    <!-- WK Webbed Gloves Pair -->
+    <g transform="translate(290, 120)">
+      <path d="M 30 180 L 30 70 Q 60 20 100 50 Q 130 90 120 180 Z" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+      <!-- Catching Webbing -->
+      <path d="M 30 80 Q 70 40 90 70" fill="none" stroke="#eab308" stroke-width="6"/>
+      <rect x="40" y="140" width="70" height="30" rx="6" fill="url(#goldGrad)"/>
+      <text x="75" y="160" font-family="Arial, sans-serif" font-weight="900" font-size="12" fill="#0f172a" text-anchor="middle">SG PRO</text>
+    </g>
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="200" y="450" width="400" height="50" rx="25" fill="#ca8a04"/>
+  <text x="400" y="482" font-family="Arial, sans-serif" font-weight="900" font-size="18" fill="#ffffff" text-anchor="middle" letter-spacing="1">SG WICKET KEEPING COMBO</text>
+</svg>

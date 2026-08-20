@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <circle cx="400" cy="300" r="220" fill="#dc2626" opacity="0.08"/>
+
+  <!-- Left & Right Batting Gloves Pair -->
+  <g filter="url(#shadow)" transform="translate(180, 100)">
+    <!-- Left Glove -->
+    <g transform="translate(0, 0)">
+      <rect x="50" y="220" width="120" height="60" rx="12" fill="#e2e8f0"/>
+      <rect x="50" y="270" width="120" height="20" rx="4" fill="url(#redGrad)"/>
+      <path d="M 50 220 Q 40 120 70 80 Q 90 60 110 80 Q 130 60 150 80 Q 170 100 170 220 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+      <!-- Finger rolls -->
+      <rect x="65" y="90" width="22" height="40" rx="10" fill="url(#redGrad)"/>
+      <rect x="92" y="80" width="22" height="50" rx="10" fill="url(#redGrad)"/>
+      <rect x="119" y="82" width="22" height="48" rx="10" fill="url(#redGrad)"/>
+      <rect x="146" y="95" width="20" height="38" rx="10" fill="url(#redGrad)"/>
+      <!-- Thumb protection -->
+      <path d="M 40 160 Q 20 140 30 110 Q 50 110 65 140 Z" fill="#ef4444"/>
+      <!-- Brand Logo -->
+      <text x="110" y="255" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#0f172a" text-anchor="middle">MRF GENIUS</text>
+    </g>
+
+    <!-- Right Glove -->
+    <g transform="translate(190, 10)">
+      <rect x="50" y="220" width="120" height="60" rx="12" fill="#e2e8f0"/>
+      <rect x="50" y="270" width="120" height="20" rx="4" fill="url(#redGrad)"/>
+      <path d="M 50 220 Q 40 100 60 80 Q 80 60 100 80 Q 120 60 140 80 Q 170 120 170 220 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+      <!-- Finger rolls -->
+      <rect x="54" y="95" width="20" height="38" rx="10" fill="url(#redGrad)"/>
+      <rect x="78" y="82" width="22" height="48" rx="10" fill="url(#redGrad)"/>
+      <rect x="105" y="80" width="22" height="50" rx="10" fill="url(#redGrad)"/>
+      <rect x="132" y="90" width="22" height="40" rx="10" fill="url(#redGrad)"/>
+      <!-- Thumb protection -->
+      <path d="M 175 160 Q 195 140 185 110 Q 165 110 150 140 Z" fill="#ef4444"/>
+      <!-- Brand Logo -->
+      <text x="110" y="255" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#0f172a" text-anchor="middle">MRF GENIUS</text>
+    </g>
+  </g>
+
+  <!-- Title Overlay Badge -->
+  <rect x="230" y="440" width="340" height="50" rx="25" fill="#dc2626"/>
+  <text x="400" y="472" font-family="Arial, sans-serif" font-weight="900" font-size="18" fill="#ffffff" text-anchor="middle" letter-spacing="1">MRF BATTING GLOVES</text>
+</svg>
