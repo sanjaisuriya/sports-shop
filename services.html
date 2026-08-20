@@ -99,54 +99,89 @@
     </div>
   </header>
 
-  <section class="bg-slate-900 text-white py-12 text-center">
-    <h1 class="text-3xl lg:text-4xl font-black">PROFESSIONAL SPORTS SERVICES</h1>
-    <p class="text-slate-300 text-sm max-w-xl mx-auto mt-1">From bat knocking-in to custom sublimated jersey printing.</p>
+  <!-- Hero Banner with Background Image -->
+  <section class="relative bg-slate-900 text-white py-16 text-center bg-cover bg-center overflow-hidden" style="background-image: url('assets/images/services-bg.svg');">
+    <div class="absolute inset-0 bg-slate-950/75 backdrop-blur-xs"></div>
+    <div class="relative z-10 max-w-3xl mx-auto px-4">
+      <span class="bg-red-600 text-white text-[11px] font-black uppercase tracking-widest px-3 py-1 rounded-full inline-block mb-3">SportsHub Services</span>
+      <h1 class="text-3xl lg:text-5xl font-black tracking-tight">PROFESSIONAL SPORTS SERVICES</h1>
+      <p class="text-slate-300 text-sm max-w-xl mx-auto mt-2 leading-relaxed">
+        From precision bat knocking-in & oiling to custom sublimated team kit printing and bulk institutional supply contracts.
+      </p>
+    </div>
   </section>
 
-  <main class="py-16 flex-1">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- Service Cards Section with Background Image & Overlay -->
+  <main class="py-16 flex-1 relative bg-cover bg-center bg-fixed" style="background-image: url('assets/images/services-bg.svg');">
+    <!-- Dark Translucent Overlay -->
+    <div class="absolute inset-0 bg-slate-950/80 dark:bg-slate-950/90 backdrop-blur-sm"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       
-      <!-- Service 1 -->
-      <div class="sh-card p-6 flex flex-col justify-between">
-        <div>
-          <div class="w-12 h-12 rounded-lg bg-red-100 dark:bg-slate-800 text-red-600 flex items-center justify-center text-2xl mb-4">
-            <i class="fa-solid fa-baseball-bat-ball"></i>
+      <!-- Service 1: Bat Knocking-In & Oiling -->
+      <div class="sh-card overflow-hidden group flex flex-col justify-between bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+        <div class="h-44 relative overflow-hidden">
+          <img src="assets/images/sg-sunny-legend-bat.svg" alt="Bat Knocking-In & Oiling" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="absolute bottom-3 left-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-red-600 text-white flex items-center justify-center text-xl shadow">
+              <i class="fa-solid fa-baseball-bat-ball"></i>
+            </div>
+            <h3 class="font-extrabold text-lg text-white">Bat Knocking-In</h3>
           </div>
-          <h3 class="font-extrabold text-lg text-slate-900 dark:text-white mb-2">Bat Knocking-In & Oiling</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
             Hand knocking-in using heavy wooden mallets and bone rollers. Protects willow fibers from premature toe cracking.
           </p>
+          <a href="service-details.html?service=knocking" class="btn-sh-primary text-xs justify-center w-full py-2.5">
+            Learn More <i class="fa-solid fa-arrow-right ml-1"></i>
+          </a>
         </div>
-        <a href="service-details.html?service=knocking" class="btn-sh-outline text-xs justify-center">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
       </div>
 
-      <!-- Service 2 -->
-      <div class="sh-card p-6 flex flex-col justify-between">
-        <div>
-          <div class="w-12 h-12 rounded-lg bg-red-100 dark:bg-slate-800 text-red-600 flex items-center justify-center text-2xl mb-4">
-            <i class="fa-solid fa-shirt"></i>
+      <!-- Service 2: Team Kit Customization -->
+      <div class="sh-card overflow-hidden group flex flex-col justify-between bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+        <div class="h-44 relative overflow-hidden">
+          <img src="assets/images/cat-football.svg" alt="Team Kit Customization" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="absolute bottom-3 left-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-red-600 text-white flex items-center justify-center text-xl shadow">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+            <h3 class="font-extrabold text-lg text-white">Team Kit Customization</h3>
           </div>
-          <h3 class="font-extrabold text-lg text-slate-900 dark:text-white mb-2">Team Kit Customization</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
             Digital sublimation printing for moisture-wicking jerseys with player names, numbers, and sponsor crest logos.
           </p>
+          <a href="service-details.html?service=customization" class="btn-sh-primary text-xs justify-center w-full py-2.5">
+            Learn More <i class="fa-solid fa-arrow-right ml-1"></i>
+          </a>
         </div>
-        <a href="service-details.html?service=customization" class="btn-sh-outline text-xs justify-center">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
       </div>
 
-      <!-- Service 3 -->
-      <div class="sh-card p-6 flex flex-col justify-between">
-        <div>
-          <div class="w-12 h-12 rounded-lg bg-red-100 dark:bg-slate-800 text-red-600 flex items-center justify-center text-2xl mb-4">
-            <i class="fa-solid fa-truck-ramp-box"></i>
+      <!-- Service 3: Bulk Institutional Wholesale -->
+      <div class="sh-card overflow-hidden group flex flex-col justify-between bg-white/95 dark:bg-slate-900/95 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+        <div class="h-44 relative overflow-hidden">
+          <img src="assets/images/cat-accessories.svg" alt="Bulk Institutional Wholesale" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="absolute bottom-3 left-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-red-600 text-white flex items-center justify-center text-xl shadow">
+              <i class="fa-solid fa-truck-ramp-box"></i>
+            </div>
+            <h3 class="font-extrabold text-lg text-white">Bulk Wholesale</h3>
           </div>
-          <h3 class="font-extrabold text-lg text-slate-900 dark:text-white mb-2">Bulk Institutional Wholesale</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
             Wholesale supply contracts for schools, sports academies, and corporate leagues with tiered quantity discounts.
           </p>
+          <a href="service-details.html?service=bulk" class="btn-sh-primary text-xs justify-center w-full py-2.5">
+            Learn More <i class="fa-solid fa-arrow-right ml-1"></i>
+          </a>
         </div>
-        <a href="service-details.html?service=bulk" class="btn-sh-outline text-xs justify-center">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
       </div>
 
     </div>
