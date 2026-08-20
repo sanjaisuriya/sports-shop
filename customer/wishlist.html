@@ -115,9 +115,39 @@
     </div>
   </header>
 
-  <main class="py-10 max-w-7xl mx-auto px-4 w-full flex-1">
-    <h2 class="text-2xl font-black mb-6">MY SAVED WISHLIST</h2>
-    <div id="wishlistGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"></div>
+  <main class="py-10 flex-1 max-w-7xl mx-auto px-4 w-full">
+    <div class="flex flex-col md:flex-row gap-8">
+      
+      <!-- Customer Sidebar -->
+      <aside class="w-full md:w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 shrink-0 shadow-sm">
+        <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-200 dark:border-slate-800">
+          <div class="w-12 h-12 rounded-full bg-red-600 text-white font-black flex items-center justify-center text-lg shadow">RS</div>
+          <div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-sm">Rahul Sharma</h3>
+            <span class="text-[11px] text-slate-500 block truncate max-w-[140px]">rahul.s@example.com</span>
+          </div>
+        </div>
+        <nav class="space-y-1 text-xs font-semibold text-slate-700 dark:text-slate-200">
+          <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-gauge-high w-4 text-red-600"></i> Dashboard Overview</a>
+          <a href="profile.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-user w-4 text-red-600"></i> My Profile</a>
+          <a href="orders.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-box-archive w-4 text-red-600"></i> My Orders</a>
+          <a href="wishlist.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-red-600 text-white"><i class="fa-solid fa-heart w-4"></i> Saved Wishlist</a>
+          <a href="addresses.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-location-dot w-4 text-red-600"></i> Addresses</a>
+          <a href="enquiries.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-truck-ramp-box w-4 text-red-600"></i> Bulk Enquiries</a>
+          <a href="team-kit-requests.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-shirt w-4 text-red-600"></i> Custom Team Kits</a>
+          <a href="reviews.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-star w-4 text-red-600"></i> Product Reviews</a>
+          <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-gear w-4 text-red-600"></i> Settings</a>
+          <a href="../login.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-red-600 hover:bg-red-50 dark:hover:bg-slate-800 mt-4"><i class="fa-solid fa-right-from-bracket w-4"></i> Logout</a>
+        </nav>
+      </aside>
+
+      <!-- Wishlist Main Section -->
+      <section class="flex-1 min-w-0 space-y-6">
+        <h2 class="text-2xl font-black text-slate-900 dark:text-white">MY SAVED WISHLIST</h2>
+        <div id="wishlistGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </section>
+
+    </div>
   </main>
 
   <!-- Universal Footer -->
